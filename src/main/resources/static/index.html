@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Hello WebSocket</title>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/animation.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Please enable
+    Javascript and reload this page!</h2></noscript>
+<h1>Welcome to chat</h1>
+<div class="animation-wrapper">
+    <div class="stagger-visualizer">
+
+        <div id="main-content" class="container">
+            <div class="welcome-section">
+
+                <div class="welcome-source">
+                    <div class="welcome-form">
+                        To Join chat enter username<br> and press 'Join'<br>Click on dots <img src="img/smiley.png">
+                    </div>
+                    <div class="welcome-code-title">See code on Git Hub</div>
+                    <div class="welcome-code-rules" id="welcome-code-rules">
+                        <div id="welcome-rules-title">Rules</div>
+                        <div class="welcome-code-rules-description" id="welcome-code-rules-description"></div>
+                    </div>
+                </div>
+                <div class="welcome-login-form">
+                    <div class="welcome-login-title"> Join Chat</div>
+                    <div class="welcome-form">
+                        <form method="post" class="form-main" action="/login">
+                            <div class="form-group-welcome">
+                                <div class="form-welcome">
+                                    <label class="login-field-icon fui-user" for="login-name"> Username</label>
+                                    <input type="text" class="form-control login-field welcome-field"
+                                           placeholder="Enter your name" name="username"/>
+                                </div>
+                            </div>
+                            <div class="admin-panel">
+                                <label class="login-field-icon fui-lock" for="login-pass"> Admin </label>
+                                <input type="password" class="admin-field" name="password"
+                                       placeholder="Join as admin"/>
+                            </div>
+                            <div class="input-form-welcome"><input class="btn btn-primary btn-lg btn-block"
+                                                                   type="submit"
+                                                                   value="Join"/></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots-wrapper"></div>
+    </div>
+</div>
+</body>
+</html>
