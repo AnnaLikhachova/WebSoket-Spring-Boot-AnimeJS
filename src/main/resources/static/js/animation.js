@@ -75,6 +75,7 @@ window.onload = function () {
             anime.remove([github]);
             anime({
                 targets: github,
+                translateX: -20,
                 scale: 2,
                 rotate: '1turn',
                 easing: 'easeInOutSine',
@@ -86,6 +87,7 @@ window.onload = function () {
             anime.remove([github]);
             anime({
                 targets: github,
+                translateX: 0,
                 scale: 1,
                 rotate: '1turn',
                 easing: 'easeInOutSine',
