@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     height: 100%;
     overflow: hidden;
-    font-family: "Comic Sans MS", sans-serif ;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 body {
@@ -26,7 +27,12 @@ input {
     outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -47,6 +53,7 @@ WELCOME SETTINGS
     z-index: 100;
     width: 100%;
 }
+
 .welcome-section {
     height: 100%;
     display: flex;
@@ -139,7 +146,8 @@ WELCOME SETTINGS
     align-self: center;
 }
 
-.form-welcome, .admin-field {
+.form-welcome,
+.admin-field {
     width: 230px;
 }
 
@@ -201,13 +209,6 @@ WELCOME SETTINGS
     border-radius: 50%;
 }
 
-@media (min-width: 740px) {
-    .stagger-visualizer .dot {
-        background-color: transparent;
-        background-image: linear-gradient(180deg, #eceff5 8%, #adb9c3 100%);
-    }
-}
-
 .stagger-visualizer .cursor {
     position: absolute;
     top: 0px;
@@ -216,7 +217,6 @@ WELCOME SETTINGS
     height: 37px;
     margin: 9px;
     background-color: #c8d7ec;
-    background-image: url("static/img/smiley.png");
     border-radius: 50%;
 }
 
@@ -255,7 +255,7 @@ CHAT SETTINGS
 
 }
 
-.chat-messages-list{
+.chat-messages-list {
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -263,7 +263,7 @@ CHAT SETTINGS
     height: 100%;
 }
 
-.chat-messages-list .row{
+.chat-messages-list .row {
     min-height: 50px;
     min-width: 100px;
     width: 50%;
@@ -293,6 +293,7 @@ CHAT SETTINGS
     margin-bottom: 20px;
     overflow: auto;
 }
+
 .group-chat {
     background-color: bisque;
     padding: 10px;
@@ -303,7 +304,8 @@ CHAT SETTINGS
     padding-bottom: 10px;
 }
 
-#greetings, #private {
+#greetings,
+#private {
     height: inherit;
     overflow: auto;
 }
@@ -319,7 +321,7 @@ CHAT SETTINGS
     justify-content: space-between;
 }
 
-.form-group label{
+.form-group label {
     color: white;
 }
 
@@ -379,7 +381,8 @@ CHAT SETTINGS
     border-radius: 10px;
 }
 
-.header-group .btn-default a, .welcome-code-title a {
+.header-group .btn-default a,
+.welcome-code-title a {
     text-decoration: none;
 }
 
@@ -391,7 +394,15 @@ CHAT SETTINGS
     color: red;
 }
 
-@media (max-width: 400px) {
+@media (min-width: 740px) {
+    .stagger-visualizer .dot {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #eceff5 8%, #adb9c3 100%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
     .chat-messages-list .row {
         width: 90%;
         height: 50%;
@@ -430,33 +441,67 @@ CHAT SETTINGS
         align-items: center;
     }
 
-    .welcome-form {
-        font-size: 40px;
+    .welcome-code-rules {
+        margin-top: 30px;
     }
 
-    h1 {
-        font-size: 4.7em;
+    .animation-wrapper {
+        height: 95%;
+    }
+
+    .animation-wrapper h1{
+        z-index: 101;
+    }
+
+    .stagger-visualizer .dot {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #eceff5 8%, #adb9c3 100%);
+    }
+
+    .welcome-code-section {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .welcome-login-form {
+        margin: 0;
+    }
+
+    .welcome-section {
+        padding: 10px;
     }
 
     .welcome-login-title {
-        font-size: 50px;
+        margin-top: 10px;
     }
 
-    .login-field-icon {
-        font-size: 50px;
+    .welcome-login-title {
+        text-align: left;
     }
 
-    .form-control {
-        height: 70px;
-        width: 300px;
-        font-size: 35px;
+    .form-group-welcome {
+        align-self: start;
     }
 
-    .welcome-code-rules {
-        margin-left: -300px;
+    .admin-panel {
+        align-self: start;
     }
 
-    .welcome-code-title {
-        margin-left: -300px;
+    .welcome-login-title {
+        z-index: 100;
+    }
+}
+@media screen and (min-width: 768px) {
+    .stagger-visualizer .dots-wrapper {
+        margin-left: -100px;
+    }
+
+    .container {
+        margin-left: -100px;
+    }
+    .welcome-source {
+        z-index: 110;
     }
 }

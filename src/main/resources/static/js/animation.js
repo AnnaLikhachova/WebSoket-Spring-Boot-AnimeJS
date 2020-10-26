@@ -57,9 +57,9 @@ window.onload = function () {
             anime.remove([rules]);
             anime({
                 targets: rules,
-                translateX: 300,
-                translateY: -150,
-                scale: 5,
+                translateX: 100,
+                translateY: -120,
+                scale: 3,
                 rotate: '1turn',
                 duration: 500,
                 easing: 'easeInOutSine',
