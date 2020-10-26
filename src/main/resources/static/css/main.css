@@ -449,7 +449,7 @@ CHAT SETTINGS
         height: 95%;
     }
 
-    .animation-wrapper h1{
+    .animation-wrapper h1 {
         z-index: 101;
     }
 
@@ -492,8 +492,49 @@ CHAT SETTINGS
     .welcome-login-title {
         z-index: 100;
     }
+
+    .chat-container {
+        flex-wrap: wrap;
+        height: unset;
+    }
+
+    .chat-participants,
+    .chat-screen,
+    .chat-messages-list .row {
+        width: 100%;
+    }
+
+    .chat-participants {
+        padding: 0;
+    }
+
+    .chat-messages-list .row {
+        height: 130px;
+        border-radius: 10px;
+    }
+
+    .chat-messages-list {
+        height: 300px;
+    }
+
+    .chat-messages {
+        height: unset;
+    }
+
+    .chat-typing-section {
+        margin: 10px;
+    }
+
+    .chat-header {
+        height: 75px;
+    }
+
+    .form-group btn {
+        margin: 5px;
+    }
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
     .stagger-visualizer .dots-wrapper {
         margin-left: -100px;
     }
@@ -501,7 +542,26 @@ CHAT SETTINGS
     .container {
         margin-left: -100px;
     }
+
     .welcome-source {
         z-index: 110;
+    }
+
+    .chat-screen {
+        width: 100%;
+    }
+
+    .chat-container {
+        flex-wrap: wrap;
+        height: unset;
+    }
+
+    .chat-messages-list .row {
+        height: 230px;
+        border-radius: 10px;
+    }
+
+    .chat-messages-list {
+        height: 500px;
     }
 }
