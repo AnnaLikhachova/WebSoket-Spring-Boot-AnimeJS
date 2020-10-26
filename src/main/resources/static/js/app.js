@@ -113,7 +113,6 @@ function showParticipants(participant) {
 
 $(function () {
     connect();
-    validateUser();
     $("form").on('submit', function (e) {
         e.preventDefault();
     });
