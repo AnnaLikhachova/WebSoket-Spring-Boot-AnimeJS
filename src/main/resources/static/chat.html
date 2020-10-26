@@ -23,7 +23,6 @@
     <div class="toast-header">
         <strong class="mr-auto"></strong>
         <small></small>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
     </div>
     <div class="toast-body">
     </div>
@@ -41,6 +40,7 @@
     <div class="chat-container">
         <div class="chat-participants">
             <div class="chat-participants-list">
+                <h2 class="group-chat" onclick="groupSending()">Group Chat</h2>
                 <h3>Participants [<span id="participants-quantity"></span>]</h3>
                 <div class="share" id="participants">
                 </div>
@@ -50,7 +50,8 @@
             <div class="chat-messages">
                 <div class="chat-messages-list">
                     <div class="row">
-                        <div class="messages">Chat</div>
+                        <div class="messages">Chat<br><span class="span-private">(click on Group Ghat to send
+            message to all)</span></div>
                         <div id="greetings"></div>
                     </div>
                     <div class="row">

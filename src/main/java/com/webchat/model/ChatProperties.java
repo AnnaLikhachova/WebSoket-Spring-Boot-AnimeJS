@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  *
  * @author Anna Likhachova
  */
-
+@ConfigurationProperties(prefix = "chat")
 public class ChatProperties {
 
 	private int maxProfanityLevel;

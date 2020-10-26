@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="utf-8" />
     <title>Hello WebSocket</title>
@@ -7,6 +7,7 @@
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
 <noscript><h2 style="color: #ff0000">Please enable
@@ -22,7 +23,7 @@
                     <div class="welcome-form">
                         To Join chat enter username<br> and press 'Join'<br>Click on dots <img src="img/smiley.png">
                     </div>
-                    <div class="welcome-code-title">See code on Git Hub</div>
+                    <div class="welcome-code-title"><a href="https://github.com/AnnaLikhachova/WebSoket-Spring-Boot-AnimeJS">See code on Git Hub</a></div>
                     <div class="welcome-code-rules" id="welcome-code-rules">
                         <div id="welcome-rules-title">Rules</div>
                         <div class="welcome-code-rules-description" id="welcome-code-rules-description"></div>
@@ -36,7 +37,8 @@
                                 <div class="form-welcome">
                                     <label class="login-field-icon fui-user" for="login-name"> Username</label>
                                     <input type="text" class="form-control login-field welcome-field"
-                                           placeholder="Enter your name" name="username"/>
+                                           placeholder="Enter your name" id="username" name="username"/>
+                                    <div id="error-dialog-error-label" class="alert alert-danger  error-info" style="display:none">Error</div>
                                 </div>
                             </div>
                             <div class="admin-panel">
@@ -45,7 +47,7 @@
                                        placeholder="Join as admin"/>
                             </div>
                             <div class="input-form-welcome"><input class="btn btn-primary btn-lg btn-block"
-                                                                   type="submit"
+                                                                   type="submit" onclick="validateUser(event)"
                                                                    value="Join"/></div>
                         </form>
                     </div>

@@ -22,17 +22,14 @@ function connect() {
     stompClient.connect({}, function (frame) {
         username = frame.headers['user-name'];
         setConnected(true);
-      console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/greetings', function (greeting) {
-            showMessage(JSON.parse(greeting.body).content);
-        });
+        console.log('Connected: ' + frame);
         stompClient.subscribe('/topic/participants', function(message) {
             showParticipants(JSON.parse(greeting.body).content);
             participants = JSON.parse(message.body);
         });
 
         stompClient.subscribe("/topic/chat.login", function(message) {
-            participants.unshift({username: JSON.parse(message.body).username, typing : false});
+            participants.unshift({username: JSON.parse(message.body).username});
         });
 
         stompClient.subscribe("/topic/chat.logout", function(message) {
@@ -51,7 +48,6 @@ function connect() {
 
         stompClient.subscribe("/app/chat.participants", function(message) {
             participants = JSON.parse(message.body);
-            //participants.push(participant);
             showParticipants(participants);
         });
 
@@ -76,10 +72,6 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function sendName() {
-    stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
-}
-
 function sendMessage() {
     var destination = "/app/chat.message";
     if( sendTo != "everyone") {
@@ -91,13 +83,17 @@ function sendMessage() {
     stompClient.send(destination, {}, JSON.stringify({'message': $("#newMessage").val()}));
 }
 
-
 function privateSending(username) {
-    sendTo = (username != sendTo) ? username : 'everyone';
+    sendTo = username;
     $('#send-to-name').empty();
     $('#send-to-name').append(sendTo);
 }
 
+function groupSending() {
+    sendTo = 'everyone';
+    $('#send-to-name').empty();
+    $('#send-to-name').append(sendTo);
+}
 
 function showMessage(message) {
     $("#greetings").append("<tr><td><span class='chat-message'></span>" + message + "</td></tr>");
@@ -117,10 +113,10 @@ function showParticipants(participant) {
 
 $(function () {
     connect();
+    validateUser();
     $("form").on('submit', function (e) {
         e.preventDefault();
     });
-    $( "#send" ).click(function() { sendName(); });
     $( "#btnSearch" ).click(function() {  sendMessage(); });
     $( "#participant" ).click(function() {  privateSending(); });
 });

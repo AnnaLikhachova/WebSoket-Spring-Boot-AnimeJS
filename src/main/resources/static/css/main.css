@@ -105,7 +105,7 @@ WELCOME SETTINGS
     height: 100px;
     font-size: 20px;
     background: azure;
-    z-index: 100;
+    z-index: 101;
     margin-top: 50px;
 
 }
@@ -228,7 +228,6 @@ CHAT SETTINGS
     margin: 40px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     height: 100%;
     width: 80%;
 }
@@ -250,7 +249,6 @@ CHAT SETTINGS
     width: 80%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     justify-content: space-evenly;
@@ -294,6 +292,11 @@ CHAT SETTINGS
     min-width: 200px;
     margin-bottom: 20px;
     overflow: auto;
+}
+.group-chat {
+    background-color: bisque;
+    padding: 10px;
+    height: 50px;
 }
 
 #send-to {
@@ -376,11 +379,84 @@ CHAT SETTINGS
     border-radius: 10px;
 }
 
-@media screen and (max-width: 730px) {
-
-
+.header-group .btn-default a, .welcome-code-title a {
+    text-decoration: none;
 }
 
-@media screen and (max-width: 480px) {
+.welcome-code-title a {
+    color: black;
+}
 
+.alert-danger {
+    color: red;
+}
+
+@media (max-width: 400px) {
+    .chat-messages-list .row {
+        width: 90%;
+        height: 50%;
+        justify-content: unset;
+    }
+
+    .chat-messages-list {
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .chat-messages {
+        height: 40%;
+    }
+
+    .chat-screen {
+        justify-content: unset;
+    }
+
+    .main-container {
+        width: 95%;
+    }
+
+    .stagger-visualizer {
+        position: unset;
+        width: unset;
+        height: unset;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+    }
+
+    .welcome-source {
+        align-items: center;
+    }
+
+    .welcome-form {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 4.7em;
+    }
+
+    .welcome-login-title {
+        font-size: 50px;
+    }
+
+    .login-field-icon {
+        font-size: 50px;
+    }
+
+    .form-control {
+        height: 70px;
+        width: 300px;
+        font-size: 35px;
+    }
+
+    .welcome-code-rules {
+        margin-left: -300px;
+    }
+
+    .welcome-code-title {
+        margin-left: -300px;
+    }
 }
