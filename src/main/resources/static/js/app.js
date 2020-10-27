@@ -3,6 +3,8 @@ var username     = '';
 var sendTo       = 'everyone';
 var participants = [];
 var messages     = [];
+var privateMessages = [];
+var privateMessage = $("#private");
 
 function setConnected(connected) {
     $("#connect").prop("disabled", connected);
@@ -55,7 +57,7 @@ function connect() {
             var parsed = JSON.parse(message.body);
             parsed.priv = true;
             showPrivateMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message);
-            messages.unshift(parsed);
+            privateMessages.unshift(parsed);
         });
 
         stompClient.subscribe("/user/queue/reply/errors", function(message) {
@@ -79,8 +81,8 @@ function sendMessage() {
         $('#send-to-name').empty();
         $('#send-to-name').append(sendTo);
     }
-
     stompClient.send(destination, {}, JSON.stringify({'message': $("#newMessage").val()}));
+    $('#newMessage').val('');
 }
 
 function privateSending(username) {
@@ -97,10 +99,12 @@ function groupSending() {
 
 function showMessage(message) {
     $("#greetings").append("<tr><td><span class='chat-message'></span>" + message + "</td></tr>");
+    $("#greetings").scrollTop( $("#greetings").offset().top );
 }
 
 function showPrivateMessage(message) {
     $("#private").append("<tr><td><span class='private-message'>[private] </span>" + message + "</td></tr>");
+    $("#private").scrollTop( $("#private").offset().top );
 }
 
 function showParticipants(participant) {

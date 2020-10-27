@@ -27,7 +27,7 @@
           <entry key="css" value="7" />
           <entry key="html" value="11" />
           <entry key="iml" value="3" />
-          <entry key="java" value="104" />
+          <entry key="java" value="105" />
           <entry key="js" value="19" />
           <entry key="png" value="3" />
           <entry key="properties" value="4" />
@@ -40,7 +40,7 @@
           <entry key="HTML" value="11" />
           <entry key="IDEA_MODULE" value="3" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="104" />
+          <entry key="JAVA" value="105" />
           <entry key="JavaScript" value="18" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
@@ -50,20 +50,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="390" />
+          <entry key="css" value="396" />
           <entry key="html" value="491" />
           <entry key="java" value="710" />
-          <entry key="js" value="621" />
+          <entry key="js" value="804" />
           <entry key="properties" value="100" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="390" />
+          <entry key="CSS" value="396" />
           <entry key="HTML" value="491" />
           <entry key="JAVA" value="710" />
-          <entry key="JavaScript" value="621" />
+          <entry key="JavaScript" value="804" />
           <entry key="Properties" value="100" />
           <entry key="XML" value="1" />
         </counts>
@@ -72,20 +72,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="73" />
+            <state relative-caret-position="283">
+              <caret line="82" column="74" lean-forward="true" selection-start-line="82" selection-start-column="74" selection-end-line="82" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="577" lean-forward="true" selection-start-line="577" selection-end-line="577" />
+            <state relative-caret-position="296">
+              <caret line="415" column="19" selection-start-line="415" selection-start-column="19" selection-end-line="415" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -93,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="-170">
               <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -115,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="-738">
               <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
             </state>
           </provider>
@@ -180,8 +192,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/chat.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/animation.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/app.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/app.js" />
       </list>
     </option>
   </component>
@@ -254,6 +266,23 @@
               <item name="chat spring websockets jquery" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webchat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat spring websockets jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webchat" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat spring websockets jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,7 +343,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603750937494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603796563393" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -365,16 +394,15 @@
       <updated>1603386024751</updated>
       <workItem from="1603386027574" duration="4246000" />
       <workItem from="1603397434730" duration="126000" />
-      <workItem from="1603397713547" duration="41381000" />
+      <workItem from="1603397713547" duration="46907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45753000" />
+    <option name="totallyTimeSpent" value="51279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -386,13 +414,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.33844188" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.33844188" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49930555" visible="true" weight="0.32950193" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49930555" weight="0.32950193" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50069445" side_tool="true" weight="0.33844188" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32822478" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -710,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/ChatConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -754,9 +772,40 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/animation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="93" column="30" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-738">
+          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="415" column="19" selection-start-line="415" selection-start-column="19" selection-end-line="415" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="-170">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -765,31 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="93" column="30" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="577" lean-forward="true" selection-start-line="577" selection-end-line="577" />
+        <state relative-caret-position="283">
+          <caret line="82" column="74" lean-forward="true" selection-start-line="82" selection-start-column="74" selection-end-line="82" selection-end-column="74" />
         </state>
       </provider>
     </entry>

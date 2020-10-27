@@ -413,6 +413,7 @@ CHAT SETTINGS
         height: 100%;
         width: 100%;
         flex-wrap: wrap;
+        padding: 0;
     }
 
     .chat-messages {
@@ -573,5 +574,6 @@ CHAT SETTINGS
 
     .chat-messages-list {
         height: 500px;
+        padding: 0;
     }
 }
