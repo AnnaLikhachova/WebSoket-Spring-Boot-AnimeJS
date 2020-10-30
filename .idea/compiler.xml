@@ -9,7 +9,7 @@
         <module name="messaging-websocket" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="messaging-websocket" target="1.8" />
     </bytecodeTargetLevel>
   </component>

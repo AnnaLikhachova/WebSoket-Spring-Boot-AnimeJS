@@ -1,14 +1,19 @@
 package com.webchat.repository;
 
 import com.webchat.event.UserLoggedInEvent;
+import org.springframework.stereotype.Repository;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 /**
  * 
  * @author Anna Likhachova
  */
+
+
 public class UsersRepository {
 
 	private Map<String, UserLoggedInEvent> activeSessions = new ConcurrentHashMap<>();
@@ -31,5 +36,15 @@ public class UsersRepository {
 
 	public void setActiveSessions(Map<String, UserLoggedInEvent> activeSessions) {
 		this.activeSessions = activeSessions;
+	}
+
+	public Optional<String> getSessionIdByName(String name) {
+		return Optional.ofNullable(activeSessions.entrySet().stream()
+                .filter(c -> c.getValue().getUsername().equals(name)).findAny().get().getKey());
+
+
+
+
+
 	}
 }

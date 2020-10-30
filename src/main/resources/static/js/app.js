@@ -5,6 +5,7 @@ var participants = [];
 var messages     = [];
 var privateMessages = [];
 var privateMessage = $("#private");
+var CHAT_SERVICE = "http://localhost:8080";
 
 function setConnected(connected) {
     $("#connect").prop("disabled", connected);
@@ -25,9 +26,10 @@ function connect() {
         username = frame.headers['user-name'];
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/participants', function(message) {
-            showParticipants(JSON.parse(greeting.body).content);
+
+        stompClient.subscribe("/topic/chat.participants", function(message) {
             participants = JSON.parse(message.body);
+            showParticipants(participants);
         });
 
         stompClient.subscribe("/topic/chat.login", function(message) {
@@ -48,16 +50,30 @@ function connect() {
             messages.unshift(JSON.parse(greeting.body));
         });
 
+        stompClient.subscribe('/topic/chat.messages', function(message) {
+            showMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message+" "+JSON.parse(message.body).time);
+            messages = JSON.parse(message.body);
+        });
+
         stompClient.subscribe("/app/chat.participants", function(message) {
             participants = JSON.parse(message.body);
             showParticipants(participants);
+        });
+
+        stompClient.subscribe("/app/chat.messages", function(message) {
+            showMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message+" "+JSON.parse(message.body).time);
+            messages = JSON.parse(message.body);
         });
 
         stompClient.subscribe("/user/queue/reply", function(message) {
             var parsed = JSON.parse(message.body);
             parsed.priv = true;
             showPrivateMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message);
-            privateMessages.unshift(parsed);
+        });
+
+        stompClient.subscribe("/user/queue/private", function(message) {
+            var parsed = JSON.parse(message.body);
+            showPrivateMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message);
         });
 
         stompClient.subscribe("/user/queue/reply/errors", function(message) {
@@ -83,6 +99,17 @@ function sendMessage() {
     }
     stompClient.send(destination, {}, JSON.stringify({'message': $("#newMessage").val()}));
     $('#newMessage').val('');
+}
+
+function showPrivateMessages() {
+    if( sendTo != "everyone") {
+        destination = "/app/private/" +  username + "/" + sendTo;
+        $('#send-to-name').empty();
+        $('#send-to-name').append(sendTo);
+        stompClient.send(destination, {});
+        $('#newMessage').val('');
+    }
+
 }
 
 function privateSending(username) {
@@ -115,6 +142,30 @@ function showParticipants(participant) {
     $("#participants-quantity").append(participant.length);
 }
 
+function findChatMessages(username, recipientName) {
+    $.get(CHAT_SERVICE + "/messages/" + username + "/" + recipientName,
+        function(data, status){
+
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+}
+
+function findChatMessage(id) {
+    $.get(CHAT_SERVICE + "/messages/" + id,
+        function(data, status){
+
+
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+}
+
+function countNewMessages(username, recipientName) {
+    $.get(CHAT_SERVICE + "/messages/" + username + "/" + recipientName + "/count",
+        function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+}
+
 $(function () {
     connect();
     $("form").on('submit', function (e) {
@@ -122,5 +173,6 @@ $(function () {
     });
     $( "#btnSearch" ).click(function() {  sendMessage(); });
     $( "#participant" ).click(function() {  privateSending(); });
+
 });
 

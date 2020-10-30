@@ -1,19 +1,31 @@
 package com.webchat.model;
 
+import org.springframework.data.redis.core.RedisHash;
+
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 
  * @author Anna Likhachova
  */
-public class ChatMessage implements Serializable {
 
+public class ChatMessage {
+
+    private String chatId;
+    private String senderId;
+    private String recipientId;
     private String username;
+    private String recipientName;
     private String message;
+    private String time;
+    private MessageStatus status;
 
     public ChatMessage(String username, String message) {
         this.username = username;
         this.message = message;
+        this.time = new SimpleDateFormat("HH:mm").format(new Date());
     }
 
     public String getUsername() {
@@ -32,4 +44,52 @@ public class ChatMessage implements Serializable {
         this.message = message;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+
+    public String getChatId() {
+        return chatId;
+    }
+
+    public void setChatId(String chatId) {
+        this.chatId = chatId;
+    }
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
+    public String getRecipientId() {
+        return recipientId;
+    }
+
+    public void setRecipientId(String recipientId) {
+        this.recipientId = recipientId;
+    }
+
+    public String getRecipientName() {
+        return recipientName;
+    }
+
+    public void setRecipientName(String recipientName) {
+        this.recipientName = recipientName;
+    }
+
+    public MessageStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(MessageStatus status) {
+        this.status = status;
+    }
 }

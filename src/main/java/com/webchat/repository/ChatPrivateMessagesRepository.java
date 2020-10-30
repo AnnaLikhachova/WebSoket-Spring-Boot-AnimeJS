@@ -2,21 +2,16 @@ package com.webchat.repository;
 
 import com.webchat.model.ChatMessage;
 import com.webchat.model.MessageStatus;
-import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Stream;
 
 /**
  * 
  * @author Anna Likhachova
  */
 
-public class ChatMessagesRepository {
+public class ChatPrivateMessagesRepository {
 
 	private Map<String, ChatMessage> messages = new ConcurrentHashMap<>();
 
