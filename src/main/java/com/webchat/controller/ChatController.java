@@ -92,8 +92,9 @@ public class ChatController {
                         message.getChatId(),
                         message.getSenderId(),
                         message.getUsername()));
+        simpMessagingTemplate.convertAndSendToUser(principal.getName(), "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
 
-      simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
+        simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
     }
 
     @SubscribeMapping("/chat.private.messages/{username}")

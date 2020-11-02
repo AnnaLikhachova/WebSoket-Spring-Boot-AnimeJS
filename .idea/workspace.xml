@@ -27,8 +27,8 @@
           <entry key="css" value="10" />
           <entry key="html" value="15" />
           <entry key="iml" value="3" />
-          <entry key="java" value="282" />
-          <entry key="js" value="28" />
+          <entry key="java" value="312" />
+          <entry key="js" value="31" />
           <entry key="png" value="3" />
           <entry key="properties" value="7" />
           <entry key="xml" value="7" />
@@ -40,8 +40,8 @@
           <entry key="HTML" value="15" />
           <entry key="IDEA_MODULE" value="3" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="282" />
-          <entry key="JavaScript" value="27" />
+          <entry key="JAVA" value="312" />
+          <entry key="JavaScript" value="30" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="7" />
           <entry key="Scratch" value="1" />
@@ -53,8 +53,8 @@
           <entry key="css" value="538" />
           <entry key="dummy" value="8" />
           <entry key="html" value="650" />
-          <entry key="java" value="2728" />
-          <entry key="js" value="2173" />
+          <entry key="java" value="2756" />
+          <entry key="js" value="2192" />
           <entry key="properties" value="103" />
           <entry key="xml" value="6" />
         </counts>
@@ -63,8 +63,8 @@
         <counts>
           <entry key="CSS" value="538" />
           <entry key="HTML" value="651" />
-          <entry key="JAVA" value="2728" />
-          <entry key="JavaScript" value="2172" />
+          <entry key="JAVA" value="2756" />
+          <entry key="JavaScript" value="2191" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="Properties" value="103" />
           <entry key="XML" value="6" />
@@ -74,57 +74,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+            <state relative-caret-position="337">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2026#2027#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatNotification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="29" />
-              <folding>
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="246">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -178,9 +144,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/static/fire.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/animation.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/BannedUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/ChatProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/spring/websocket/autoconfigure/InMemoryWebSocketTraceRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/spring/websocket/autoconfigure/WebSocketEndpointAutoConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/spring/websocket/autoconfigure/WebSocketTrace.java" />
@@ -196,31 +160,36 @@
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/animation.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/MessageStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/ChatRoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatRoomRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/ChatNotification.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/event/HttpHandshakeInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatRoomRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatprivateMessagesRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/exception/NoSessionIdException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/ChatMessage.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/chat.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatMessagesRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/UsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/AjaxResponseBody.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/login.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/JqueryResponseBody.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/UsersRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatMessagesRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/MessageStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/JqueryResponseBody.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/ChatProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/ChatNotification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/model/BannedUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/exception/NoSessionIdException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/exception/BannedUsersException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedOutEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedInEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/event/ActiveUserEventListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/configuration/ChatConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/app.js" />
@@ -479,7 +448,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604357332926" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604359908039" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -540,12 +509,12 @@
       <updated>1603386024751</updated>
       <workItem from="1603386027574" duration="4246000" />
       <workItem from="1603397434730" duration="126000" />
-      <workItem from="1603397713547" duration="137715000" />
+      <workItem from="1603397713547" duration="139778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142087000" />
+    <option name="totallyTimeSpent" value="144150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -561,13 +530,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.33816424" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.397343" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.33816424" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.397343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49930555" weight="0.32950193" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49930555" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50069445" side_tool="true" weight="0.33844188" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32729468" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -579,7 +548,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="5" visible="true" weight="0.10069445" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.10069445" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -627,33 +596,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java</url>
-          <line>32</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java</url>
-          <line>39</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java</url>
-          <line>49</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/UsersRepository.java</url>
-          <line>43</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java</url>
@@ -667,6 +630,36 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -678,11 +671,17 @@
         <watch expression="ResponseEntity.ok(result)" language="JAVA" />
         <watch expression="messagingTemplate.convertAndSend(loginDestination, userLoggedInEvent)" language="JAVA" />
         <watch expression="usersRepository.getActiveSessions().values()" language="JAVA" />
+        <watch expression="messages.entrySet().stream().filter(p -&gt; p.getKey() == sessionId).flatMap(p -&gt; p.getValue().stream()).collect(Collectors.toList())" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>messages.entrySet().stream().filter(p -&gt; p.getKey() == sessionId).flatMap(p -&gt; p.getValue().stream()).collect(Collectors.toList())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>usersRepository.getActiveSessions().values()</expression-string>
         <language-id>JAVA</language-id>
@@ -731,85 +730,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/spring/websocket/autoconfigure/WebSocketTraceAutoconfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/spring/websocket/autoconfigure/WebSocketTrace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedOutEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/HttpHandshakeInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE-sources.jar!/org/springframework/messaging/support/ExecutorSubscribableChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="155" column="40" lean-forward="true" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE-sources.jar!/org/springframework/messaging/simp/annotation/support/SimpAnnotationMethodMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="515" selection-start-line="515" selection-end-line="515" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/exception/NoSessionIdException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.3.3.RELEASE/spring-security-core-5.3.3.RELEASE-sources.jar!/org/springframework/security/authentication/AbstractAuthenticationToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -835,31 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -881,31 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/JqueryResponseBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatMessagesRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatRoomRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -923,38 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1058#1087#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedInEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,53 +908,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/ChatConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state relative-caret-position="228">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/UsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatRoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/animation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1167" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatMessagesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/UsersRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/MessageStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/ActiveUserEventListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/JqueryResponseBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/login.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+        <state relative-caret-position="55">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2026#2027#0" expanded="true" />
-            <element signature="e#2093#2094#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="e#989#1017#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatNotification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding>
             <element signature="e#353#354#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
@@ -1130,17 +1007,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/chat.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="490">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/model/BannedUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/exception/NoSessionIdException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/ChatConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/configuration/WebSocketSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/HttpHandshakeInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/ActiveUserEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedOutEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/exception/BannedUsersException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/event/UserLoggedInEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/service/ChatMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/repository/ChatPrivateMessagesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        <state relative-caret-position="246">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/webchat/controller/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

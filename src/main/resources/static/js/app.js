@@ -28,8 +28,8 @@ function connect() {
 
         stompClient.subscribe("/topic/chat.login", function(message) {
             stompClient.send("/app/chat.participants", {});
-            participants.unshift(JSON.parse(message.body));
-            showParticipants(participants);
+           // participants.unshift(JSON.parse(message.body));
+           // showParticipants(participants);
         });
 
         stompClient.subscribe("/topic/chat.logout", function(message) {
@@ -75,7 +75,7 @@ function sendMessage() {
         destination = "/app/chat/private/" +  sendTo;
         $('#send-to-name').empty();
         $('#send-to-name').append(sendTo);
-        //    stompClient.send("/chat.private.messages/"+sendTo, {}, JSON.stringify({'message': $("#newMessage").val()}));
+       // stompClient.send("/app/chat.private.messages/"+username, {}, JSON.stringify({'message': $("#newMessage").val()}));
     }
     stompClient.send(destination, {}, JSON.stringify({'message': $("#newMessage").val()}));
     $('#newMessage').val('');
