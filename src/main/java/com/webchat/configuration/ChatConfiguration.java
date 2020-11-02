@@ -13,18 +13,11 @@ import com.webchat.util.BannedUserFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Description;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 
-import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import redis.embedded.RedisServer;
 
 /**
@@ -40,13 +33,12 @@ public class ChatConfiguration {
 	@Autowired
 	private ChatProperties chatProperties;
 
-
     /**
      * Set the {@link ActiveUserEventListener} for login and logout events.
      */
 	@Bean
-	public ActiveUserEventListener presenceEventListener(SimpMessagingTemplate messagingTemplate) {
-		ActiveUserEventListener presence = new ActiveUserEventListener(messagingTemplate, participantRepository());
+	public ActiveUserEventListener presenceEventListener() {
+        ActiveUserEventListener presence = new ActiveUserEventListener();
 		presence.setLoginDestination(chatProperties.getDestinations().getLogin());
 		presence.setLogoutDestination(chatProperties.getDestinations().getLogout());
 		return presence;
@@ -99,21 +91,4 @@ public class ChatConfiguration {
         return new RedisServer(port);
     }
 
-	/*
-    @Bean
-    JedisConnectionFactory jedisConnectionFactory() {
-        return new JedisConnectionFactory();
-    }
-
-    /**
-     * Create  Redis {@link RedisTemplate}.
-
-    @Bean
-    public RedisTemplate<String, Object> redisTemplate() {
-        RedisTemplate<String, Object> template = new RedisTemplate<>();
-        template.setConnectionFactory(jedisConnectionFactory());
-        return template;
-    }
-
-*/
 }

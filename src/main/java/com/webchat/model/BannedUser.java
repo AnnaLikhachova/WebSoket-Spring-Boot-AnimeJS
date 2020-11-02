@@ -1,11 +1,10 @@
 package com.webchat.model;
 
 import com.webchat.exception.BannedUsersException;
-
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * 
+ *
  * @author Anna Likhachova
  */
 public class BannedUser {

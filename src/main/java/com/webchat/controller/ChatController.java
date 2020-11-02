@@ -2,9 +2,11 @@ package com.webchat.controller;
 
 import com.webchat.event.UserLoggedInEvent;
 import com.webchat.exception.BannedUsersException;
+import com.webchat.exception.NoSessionIdException;
+import com.webchat.model.ChatNotification;
+import com.webchat.model.JqueryResponseBody;
 import com.webchat.model.ChatMessage;
 import com.webchat.model.BannedUser;
-import com.webchat.model.ChatNotification;
 import com.webchat.repository.ChatMessagesRepository;
 import com.webchat.repository.ChatPrivateMessagesRepository;
 import com.webchat.repository.UsersRepository;
@@ -14,17 +16,17 @@ import com.webchat.util.BannedUserFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.*;
-import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.Collection;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Chat Controller
@@ -48,9 +50,6 @@ public class ChatController {
     private ChatMessagesRepository chatMessagesRepository;
 
     @Autowired
-    private ChatPrivateMessagesRepository chatPrivateMessagesRepository;
-
-    @Autowired
     private ChatRoomService chatRoomService;
 
     @Autowired
@@ -65,39 +64,42 @@ public class ChatController {
         return usersRepository.getActiveSessions().values();
     }
 
-    @SubscribeMapping("/chat.messages")
-    @SendTo("/topic/messages")
-    public Collection<ChatMessage> retrieveGroupMessages() {
-        Collection<ChatMessage> retrieveGroupMessages =chatMessagesRepository.getMessages().values();
-        if(retrieveGroupMessages.isEmpty()) return null;
-        return retrieveGroupMessages;
-    }
-
-
     @MessageMapping("/chat.message")
-    @SendTo("/topic/messages")
-    public ChatMessage filterMessage(@Payload ChatMessage message, Principal principal, @Header("simpSessionId") String sessionId) {
+    public void filterMessage(@Payload ChatMessage message, Principal principal, @Header("simpSessionId") String sessionId) {
         checkToBan(message);
+        message.setUsername(principal.getName());
+        message.setSenderId(sessionId);
+        message.setTime();
         chatMessagesRepository.add(sessionId, message);
-        return new ChatMessage(principal.getName(), message.getMessage());
+        simpMessagingTemplate.convertAndSend("/topic/messages", chatMessagesRepository.getMessages());
     }
 
     @MessageMapping("/chat/private/{username}")
-    public void filterPrivateMessage(@Payload ChatMessage message, @DestinationVariable("username") String username, Principal principal) {
+    public void filterPrivateMessage(@Payload ChatMessage message, @DestinationVariable("username") String username, Principal principal, @Header("simpSessionId") String sessionId) {
         checkToBan(message);
-
-        Optional<String> chatId = chatRoomService
-                .getChatId(message.getSenderId(), message.getRecipientId(), true);
         message.setUsername(principal.getName());
-        chatMessageService.save(chatId.get(),message);
-       /* simpMessagingTemplate.convertAndSendToUser(
-                username,"/queue/reply",
+        message.setSenderId(sessionId);
+        message.setRecipientName(username);
+        message.setRecipientId(returnUserId(username));
+        message.setTime();
+
+        String chatId = chatRoomService
+                .getChatId(message.getSenderId(), message.getRecipientId(), true).get();
+        chatMessageService.save(chatId,message);
+        message.setChatId(chatId);
+        simpMessagingTemplate.convertAndSendToUser(username,"/queue/notification",
                 new ChatNotification(
-                        saved.getChatId(),
-                        saved.getSenderId(),
-                        saved.getUsername()));
-*/
-        simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", message);
+                        message.getChatId(),
+                        message.getSenderId(),
+                        message.getUsername()));
+
+      simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
+    }
+
+    @SubscribeMapping("/chat.private.messages/{username}")
+    @SendToUser("/queue/reply")
+    public Collection<ChatMessage> findChatMessages (@DestinationVariable("username") String username, Principal principal) {
+        return chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username));
     }
 
     private void checkToBan(ChatMessage message) {
@@ -106,9 +108,10 @@ public class ChatController {
         message.setMessage(bannedUserFilter.filter(message.getMessage()));
     }
 
-
     private String returnUserId(String name) {
-        return String.valueOf(usersRepository.getSessionIdByName(name));
+       Optional<String> object = usersRepository.getSessionIdByName(name);
+       if(object.isPresent()) return object.get();
+       throw new NoSessionIdException("No user with name "+name+" in the repository");
     }
 
     @MessageExceptionHandler
@@ -117,25 +120,21 @@ public class ChatController {
         return e.getMessage();
     }
 
-    @MessageMapping("/private/{username}/{recipientName}")
-    @SendTo("/queue/private")
-    public ResponseEntity<?> findChatMessages (@DestinationVariable("username") String username, Principal principal) {
-        return ResponseEntity
-                .ok(chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
+    @PostMapping(value = "/name-unique")
+    public ResponseEntity findName (@RequestBody String username, Errors errors) {
+        JqueryResponseBody result = new JqueryResponseBody();
+        if (errors.hasErrors()) {
+            result.setMsg(errors.getAllErrors()
+                    .stream().map(x -> x.getDefaultMessage())
+                    .collect(Collectors.joining(",")));
+
+            return ResponseEntity.badRequest().body(result);
+
+        }
+
+        String exists = String.valueOf(usersRepository.isNameUniqe(username));
+        result.setResult(exists);
+        return  ResponseEntity.ok(result);
     }
 
-    @GetMapping("/reply/{username}/{recipientName}/count")
-    public ResponseEntity<Long> countNewMessages(
-            @PathVariable String username,
-            @PathVariable String recipientName) {
-
-        return ResponseEntity
-                .ok(chatMessageService.countNewMessages(returnUserId(username), returnUserId(recipientName)));
-    }
-
-    @GetMapping("/reply/{id}")
-    public ResponseEntity<?> findMessage ( @PathVariable String id) {
-        return ResponseEntity
-                .ok(chatMessagesRepository.getMessage(id));
-    }
 }

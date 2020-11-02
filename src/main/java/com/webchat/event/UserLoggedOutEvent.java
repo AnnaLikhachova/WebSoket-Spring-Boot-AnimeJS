@@ -4,6 +4,7 @@ package com.webchat.event;
  * 
  * @author Anna Likhachova
  */
+
 public class UserLoggedOutEvent {
 	
 	private String username;

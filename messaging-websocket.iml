@@ -83,6 +83,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.51.Final" level="project" />
     <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.3.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.github.caryyu:spring-embedded-redis-server:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.github.kstyrc:embedded-redis:0.6" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />

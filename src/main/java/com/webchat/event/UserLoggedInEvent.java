@@ -6,6 +6,7 @@ import java.util.Date;
  * 
  * @author Anna Likhachova
  */
+
 public class UserLoggedInEvent {
 
 	private String username;

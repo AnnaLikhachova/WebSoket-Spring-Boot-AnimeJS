@@ -1,5 +1,7 @@
 package com.webchat.model;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.redis.core.RedisHash;
 
 import java.io.Serializable;
@@ -11,6 +13,8 @@ import java.util.Date;
  * @author Anna Likhachova
  */
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class ChatMessage {
 
     private String chatId;
@@ -48,8 +52,8 @@ public class ChatMessage {
         return time;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTime() {
+        this.time = new SimpleDateFormat("HH:mm").format(new Date());
     }
 
 

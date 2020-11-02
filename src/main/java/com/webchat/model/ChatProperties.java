@@ -1,13 +1,14 @@
 package com.webchat.model;
 
 import java.util.Set;
-
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  *
  * @author Anna Likhachova
  */
+
 @ConfigurationProperties(prefix = "chat")
 public class ChatProperties {
 
@@ -45,8 +46,9 @@ public class ChatProperties {
 
 	public static class Destinations {
 
+	    @Value("${chat.destinations.login}")
 		private String login;
-		
+        @Value("${chat.destinations.logout}")
 		private String logout;
 
 		public String getLogin() {

@@ -1,5 +1,10 @@
 package com.webchat.model;
 
+/**
+ *
+ * @author Anna Likhachova
+ */
+
 public class ChatNotification {
     private String id;
     private String senderId;
@@ -10,7 +15,6 @@ public class ChatNotification {
         this.senderId = senderId;
         this.senderName = username;
     }
-
 
     public String getId() {
         return id;

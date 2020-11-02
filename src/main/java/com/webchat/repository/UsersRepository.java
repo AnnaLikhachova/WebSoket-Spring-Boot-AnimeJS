@@ -1,18 +1,14 @@
 package com.webchat.repository;
 
 import com.webchat.event.UserLoggedInEvent;
-import org.springframework.stereotype.Repository;
-
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 /**
  * 
  * @author Anna Likhachova
  */
-
 
 public class UsersRepository {
 
@@ -39,12 +35,13 @@ public class UsersRepository {
 	}
 
 	public Optional<String> getSessionIdByName(String name) {
-		return Optional.ofNullable(activeSessions.entrySet().stream()
-                .filter(c -> c.getValue().getUsername().equals(name)).findAny().get().getKey());
-
-
-
-
-
+		return activeSessions.entrySet().stream()
+                .filter(c -> c.getValue().getUsername().equals(name)).findAny().map(Map.Entry::getKey);
 	}
+
+	public boolean isNameUniqe(String name){
+       return activeSessions.entrySet().stream()
+               .anyMatch(c -> c.getValue().getUsername().equals(name));
+
+    }
 }

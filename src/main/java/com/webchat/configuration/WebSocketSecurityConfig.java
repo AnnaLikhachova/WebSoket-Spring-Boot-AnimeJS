@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.socket.AbstractSecurit
  *
  * @author Anna Likhachova
  *
- * @since 1.0
+ * @since 8.0
  * @see AbstractSecurityWebSocketMessageBrokerConfigurer
  */
 

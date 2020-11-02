@@ -41,8 +41,13 @@
     <div class="chat-container">
         <div class="chat-participants">
             <div class="chat-participants-list">
-                <h2 class="group-chat" onclick="groupSending()">Group Chat</h2>
-                <h3>Participants [<span id="participants-quantity"></span>]</h3>
+                <h3>Groups [1]</h3>
+                <div class="group-chat" onclick="groupSending()"><i class="fas fa-users"></i>Group Chat</div>
+                <div class="participant-menu-bar">
+                <h3>Participants [<span id="participants-quantity"></span>] </h3>
+                    <div id="participants-menu"> HIDE
+                    </div>
+                </div>
                 <div class="share" id="participants">
                 </div>
             </div>
@@ -50,12 +55,13 @@
         <div class="chat-screen">
             <div class="chat-messages">
                 <div class="chat-messages-list">
-                    <div class="row">
+                    <div class="row" id="row-greetings">
                         <div class="messages">Chat<br><span class="span-private">(click on Group Ghat to send
             message to all)</span></div>
                         <div id="greetings"></div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="row-private">
+                        <div id="send-to">Send to <span id="send-to-name"></span></div>
                         <div class="messages">Private chat <br><span class="span-private">(click on the participant to send private
             message)</span>
 
@@ -67,14 +73,16 @@
             </div>
             <div class="chat-typing-section"></div>
             <div class="chat-typing">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <div id="send-to">Send to <span id="send-to-name">everyone</span></div>
+                <form class="form-inline-area">
+                    <div class="form-group-area">
+
                         <textarea type="text" id="newMessage" class="form-control"
                                   placeholder="Type here ..."></textarea>
                     </div>
                     <button id="btnSearch" class="btn btn-default" type="submit">Send</button>
+
                 </form>
+
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@ package com.webchat.event;
 import java.util.Optional;
 
 import com.webchat.repository.UsersRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -14,20 +15,18 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
  * 
  * @author Anna Likhachova
  */
+
 public class ActiveUserEventListener {
-	
+
+    @Autowired
 	private UsersRepository usersRepository;
-	
+
+    @Autowired
 	private SimpMessagingTemplate messagingTemplate;
 	
 	private String loginDestination;
 	
 	private String logoutDestination;
-	
-	public ActiveUserEventListener(SimpMessagingTemplate messagingTemplate, UsersRepository usersRepository) {
-		this.messagingTemplate = messagingTemplate;
-		this.usersRepository = usersRepository;
-	}
 
 	/**
 	 * Create new {@link UserLoggedInEvent} and

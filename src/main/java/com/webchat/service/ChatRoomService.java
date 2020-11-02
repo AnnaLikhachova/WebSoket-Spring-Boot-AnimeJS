@@ -5,8 +5,12 @@ import com.webchat.repository.ChatRoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
+
+/**
+ *
+ * @author Anna Likhachova
+ */
 
 @Service
 public class ChatRoomService {
@@ -46,7 +50,7 @@ public class ChatRoomService {
                     chatRoomRepository.add(chatId, senderRecipient);
                     chatRoomRepository.add(chatId, recipientSender);
 
-                    return Optional.of(chatId);
+                    return Optional.ofNullable(chatId);
                 });
     }
 }
