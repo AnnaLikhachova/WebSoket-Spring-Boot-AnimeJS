@@ -46,6 +46,9 @@ a {
 WELCOME SETTINGS
 --------------------- */
 
+.main-title {
+    z-index: 1;
+}
 .container {
     z-index: 100;
     width: 100%;
@@ -480,6 +483,7 @@ CHAT SETTINGS
     .chat-screen {
         justify-content: unset;
         border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
     .main-container {
@@ -601,7 +605,6 @@ CHAT SETTINGS
         background: white;
         height: 50%;
         width: 80%;
-        display: none;
     }
 
     #participants-menu {

@@ -28,8 +28,6 @@ function connect() {
 
         stompClient.subscribe("/topic/chat.login", function(message) {
             stompClient.send("/app/chat.participants", {});
-           // participants.unshift(JSON.parse(message.body));
-           // showParticipants(participants);
         });
 
         stompClient.subscribe("/topic/chat.logout", function(message) {
@@ -51,12 +49,14 @@ function connect() {
             showParticipants(participants);
         });
 
-        stompClient.subscribe("/app/chat.private.messages" + sendTo, function(message) {
-            showPrivateMessage(JSON.parse(message.body).username + ": "+JSON.parse(message.body).message+" "+JSON.parse(message.body).time);
-        });
+        stompClient.subscribe("/app/chat.bot");
 
         stompClient.subscribe("/user/queue/reply", function(message) {
             showPrivateMessagesToUser(JSON.parse(message.body));
+        });
+
+        stompClient.subscribe("/user/queue/bot", function(message) {
+            showPrivateMessage(message.body);
         });
 
         stompClient.subscribe("/user/queue/notification", function(message) {
@@ -70,24 +70,42 @@ function connect() {
 }
 
 function sendMessage() {
-    var destination = "/app/chat.message";
-    if( sendTo != "everyone") {
-        destination = "/app/chat/private/" +  sendTo;
-        $('#send-to-name').empty();
-        $('#send-to-name').append(sendTo);
-       // stompClient.send("/app/chat.private.messages/"+username, {}, JSON.stringify({'message': $("#newMessage").val()}));
+    if( sendTo === username){
+        stompClient.send("/app/chat.bot", {});
+        return;
     }
+    var destination = "/app/chat.message";
+    if( sendTo !== "everyone") {
+            destination = "/app/chat/private/" + sendTo;
+            $('#send-to-name').empty();
+            $('#send-to-name').append(sendTo);
+  }
     stompClient.send(destination, {}, JSON.stringify({'message': $("#newMessage").val()}));
     $('#newMessage').val('');
 }
 
-function showPrivateMessages(touser) {
-    if( sendTo != "everyone") {
-        destination = "/app/private/" +  username + "/" + touser;
+function showPrivateMessages(toUser) {
+    if( sendTo !== "everyone") {
+        destination = "/app/chat.private.messages/" + toUser;
         $('#send-to-name').empty();
         $('#send-to-name').append(sendTo);
         stompClient.send(destination, {});
         $('#newMessage').val('');
+    }
+}
+
+function privateSending(toUser) {
+    sendTo = toUser;
+    $('#send-to-name').empty();
+    $('#send-to-name').append(sendTo);
+    $('#newMessage').val('');
+    changeToPrivateChatWindow();
+    showPrivateMessages(toUser);
+    handleNotification(toUser);
+    if( window.innerWidth <= 480 ){
+        $("#participants-menu").empty();
+        $("#participants-menu").append("SHOW");
+        $("#participants").hide();
     }
 }
 
@@ -103,18 +121,6 @@ function handleNotification(participantName) {
     }
 }
 
-function privateSending(username) {
-    sendTo = username;
-    destination = "/app/private/" +  username + "/" + sendTo;
-    $('#send-to-name').empty();
-    $('#send-to-name').append(sendTo);
-    stompClient.send(destination, {});
-    $('#newMessage').val('');
-    changeToPrivateChatWindow();
-    showPrivateMessages(username);
-    handleNotification(username);
-}
-
 function changeToPrivateChatWindow() {
     $("#row-greetings").hide();
     $("#row-private").show();
@@ -123,6 +129,11 @@ function changeToPrivateChatWindow() {
 function changeToGroupChatWindow() {
     $("#row-private").hide();
     $("#row-greetings").show();
+    if(window.innerWidth < 480){
+        $("#participants-menu").empty();
+        $("#participants-menu").append("SHOW");
+        $("#participants").hide();
+    }
 }
 
 function groupSending() {
@@ -141,7 +152,7 @@ function showMessage(message) {
 }
 
 function showPrivateMessage(message) {
-    $("#private").append("<tr><td><span class='private-message'>[private] </span>" + message + "</td></tr>");
+    $("#private").append("<tr><td><span class='private-message'>[bot] </span>" + message + "</td></tr>");
     $("#private").scrollTop( $("#private").offset().top );
 }
 

@@ -64,6 +64,12 @@ public class ChatController {
         return usersRepository.getActiveSessions().values();
     }
 
+    @MessageMapping("/chat.bot")
+    public void botReply(Principal principal) {
+        String message = "You cannot send messages to yourself.";
+        simpMessagingTemplate.convertAndSendToUser(principal.getName(), "/queue/bot", message);
+    }
+
     @MessageMapping("/chat.message")
     public void filterMessage(@Payload ChatMessage message, Principal principal, @Header("simpSessionId") String sessionId) {
         checkToBan(message);
@@ -96,12 +102,6 @@ public class ChatController {
         simpMessagingTemplate.convertAndSendToUser(principal.getName(), "/queue/reply", chatMessageService.addMessageToList(chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)),chatMessageService.findChatMessages(returnUserId(username), returnUserId(principal.getName()))));
 
         simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.addMessageToList(chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)),chatMessageService.findChatMessages(returnUserId(username), returnUserId(principal.getName()))));
-    }
-
-    @SubscribeMapping("/chat.private.messages/{username}")
-    @SendToUser("/queue/reply")
-    public Collection<ChatMessage> findChatMessages (@DestinationVariable("username") String username, Principal principal) {
-        return chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username));
     }
 
     private void checkToBan(ChatMessage message) {
