@@ -85,16 +85,17 @@ public class ChatController {
 
         String chatId = chatRoomService
                 .getChatId(message.getSenderId(), message.getRecipientId(), true).get();
-        chatMessageService.save(chatId,message);
         message.setChatId(chatId);
+        chatMessageService.save(chatId,message);
+
         simpMessagingTemplate.convertAndSendToUser(username,"/queue/notification",
                 new ChatNotification(
                         message.getChatId(),
                         message.getSenderId(),
                         message.getUsername()));
-        simpMessagingTemplate.convertAndSendToUser(principal.getName(), "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
+        simpMessagingTemplate.convertAndSendToUser(principal.getName(), "/queue/reply", chatMessageService.addMessageToList(chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)),chatMessageService.findChatMessages(returnUserId(username), returnUserId(principal.getName()))));
 
-        simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)));
+        simpMessagingTemplate.convertAndSendToUser(username, "/queue/reply", chatMessageService.addMessageToList(chatMessageService.findChatMessages(returnUserId(principal.getName()), returnUserId(username)),chatMessageService.findChatMessages(returnUserId(username), returnUserId(principal.getName()))));
     }
 
     @SubscribeMapping("/chat.private.messages/{username}")

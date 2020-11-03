@@ -147,6 +147,7 @@ function showPrivateMessage(message) {
 
 function showParticipants(participant) {
     $("#participants-quantity").empty();
+    $("#participants").empty();
     for(var i in participant){
         $("#participants").append('<tr><td><div class="participant-scroll"><i class="far fa-user"></i><a  id="participant" onclick="privateSending(\'' + participant[i].username + '\')">' + participant[i].username + '</a></div></td></tr>');
     }

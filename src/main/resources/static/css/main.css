@@ -6,18 +6,15 @@
 
 html,
 body {
-    height: 100%;
-    overflow: hidden;
     font-family: "Comic Sans MS", sans-serif;
 }
 
 body {
-    background: -webkit-linear-gradient(left, #a2dbf9, #c8d7ec);
+    background: -webkit-linear-gradient(left, #bbbfc1, #fbfbfb);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 100%;
     height: 100vh;
 }
@@ -42,7 +39,7 @@ h1 {
 }
 
 a {
-    color: #128ff2;
+    color: #34394d;
 }
 
 /* ---------------------
@@ -233,8 +230,10 @@ CHAT SETTINGS
 }
 
 .chat-header {
-    background: #34394d;
-    height: 50px;
+    background: #eee;
+    height: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .chat-messages {
@@ -284,6 +283,8 @@ CHAT SETTINGS
     flex-direction: row;
     background: white;
     height: 85%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .chat-participants {
@@ -298,7 +299,7 @@ CHAT SETTINGS
     margin: 5px 0 0 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid bisque;
+    border: 1px solid #cccccc;
     border-radius: 10px;
     min-width: 100px;
     background: white;
@@ -320,7 +321,7 @@ CHAT SETTINGS
 }
 
 .group-chat {
-    background-color: bisque;
+    background-color: #cccccc;
     padding: 10px;
     height: 50px;
 }
@@ -338,6 +339,10 @@ CHAT SETTINGS
     font-size: 1.17em;
 }
 
+#participants {
+    display: block;
+}
+
 #send-to {
     padding-bottom: 10px;
 }
@@ -346,7 +351,7 @@ CHAT SETTINGS
 #private {
     height: inherit;
     overflow: auto;
-    background: #b2d9f3;
+    background: #eee;
 }
 
 .form-group {
@@ -361,7 +366,7 @@ CHAT SETTINGS
 }
 
 .form-group label {
-    color: white;
+    color: #34394d;
 }
 
 .form-inline-area {
@@ -379,7 +384,7 @@ CHAT SETTINGS
 }
 
 .chat-typing-section {
-    background: #ff853b;
+    background: #bd362f;
     height: 5px;
 }
 
@@ -394,7 +399,7 @@ CHAT SETTINGS
 
 .messages {
     font-size: 20px;
-    background: #34394d;
+    background: #7b8184;
     border-radius: 5px;
     text-align: center;
     color: white;
@@ -423,9 +428,14 @@ CHAT SETTINGS
 .btn-default {
     width: 100px;
     height: 35px;
-    background: azure;
-    border: rgb(163, 160, 160) solid 1px;
+    background: #bcbdc1;
+    border: rgb(162 162 162) solid 3px;
     border-radius: 10px;
+}
+
+#btnSearch {
+    background: #9e2d29;
+    border-radius: unset;
 }
 
 .header-group .btn-default a,
@@ -469,6 +479,7 @@ CHAT SETTINGS
 
     .chat-screen {
         justify-content: unset;
+        border-bottom-right-radius: 20px;
     }
 
     .main-container {
@@ -590,6 +601,7 @@ CHAT SETTINGS
         background: white;
         height: 50%;
         width: 80%;
+        display: none;
     }
 
     #participants-menu {

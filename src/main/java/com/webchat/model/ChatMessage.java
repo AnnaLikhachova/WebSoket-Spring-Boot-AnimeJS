@@ -29,7 +29,7 @@ public class ChatMessage {
     public ChatMessage(String username, String message) {
         this.username = username;
         this.message = message;
-        this.time = new SimpleDateFormat("HH:mm").format(new Date());
+        this.time = new SimpleDateFormat("HH:mm:ss").format(new Date());
     }
 
     public String getUsername() {
@@ -53,9 +53,8 @@ public class ChatMessage {
     }
 
     public void setTime() {
-        this.time = new SimpleDateFormat("HH:mm").format(new Date());
+        this.time = new SimpleDateFormat("HH:mm:ss").format(new Date());
     }
-
 
     public String getChatId() {
         return chatId;

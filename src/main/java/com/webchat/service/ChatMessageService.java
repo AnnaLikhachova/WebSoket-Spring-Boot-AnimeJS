@@ -5,6 +5,8 @@ import com.webchat.model.MessageStatus;
 import com.webchat.repository.ChatPrivateMessagesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -45,6 +47,9 @@ public class ChatMessageService {
         return messagesNew;
     }
 
+    public List<ChatMessage> addMessageToList(List<ChatMessage>  senderList, List<ChatMessage> recipientList) {
+        return senderList.stream().collect(Collectors.toCollection(() -> recipientList)).stream().sorted(Comparator.comparing(ChatMessage::getTime)) .collect(Collectors.toList());
+    }
 
     private void updateStatuses(String chatId, MessageStatus status) {
         repository.getMessages().entrySet().stream()
